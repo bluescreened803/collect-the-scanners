@@ -13,7 +13,6 @@ function setup() {
   scanner = loadImage("scanner.png");
   idcard = loadImage("idcard.png");
   brick = loadImage("brick_wall.jpg");
-  noCursor();
   for (let i=0; i < 15; i+=1) {
     if (selector > 5) {
       let collectable = new Collectable(scanner);
@@ -30,6 +29,7 @@ function setup() {
 function draw() {
   background(187, 222, 251);
   if (lives > 0 && gameStart == true) {
+    noCursor();
     rectMode(CENTER);
     fill(255);
     imageMode(CENTER);
